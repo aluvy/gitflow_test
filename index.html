@@ -22,27 +22,39 @@
     <article>
         <h2>Contents area</h2>
         <section>
-            <h2>Git-flow 전략 간단하게 살펴보기</h2>
+            <h2>Overview</h2>
             <div>
-                <h3>Git Flow 란?</h3>
-                <p>Git Flow는 원래 깃 브랜치 관리를 위한 전략이었던 Git Workflow다.</p>
-                <p>Git Flow는 feature 브랜치와 여러 기본(primary) 브랜치를 사용하는 대한적인 Git 브랜치 모델이다.</p>
-                <p>이 모델에서 개발자는 feature 브랜치를 만들고 기능이 완료될 때까지 이를 기본 트렁크 분기에 병합(merge)하는 것을 연기한다.</p>
-                <p>Git Flow는 예정된 출시 주기가 있는 프로젝트와 지속적 제공의 DevOps 모범 사례에 사용할 수 있다.</p>
+                <p>GitFlow는 feature 브랜치와 여러 기본(primary) 브랜치를 사용하는 대안적인 Git 브랜치 모델이다.</p>
+                <p>feature 브랜치 외에도 release 준비, 유지관리 및 기록을 위해 개별 브랜치를 사용한다.</p>
+                <p>git-flow는 Vincent Driessen의 branching model을 적용해 고수준으로 저장소를 관리할 수 있게 해주는 확장 기능이다.</p>
+                <p>branching model은 feature - develop(dev) - release - hotfix - master 단계로 브랜치를 나눠 코드를 관리하는 전략이며 사용자가 쉽게 접근하고 사용할 수 있도록 확장 기능(명령어)을 제공하는 것이다.</p>
+                <p>git-flow에는 5가지 브랜치가 있다. 항상 유지되는 주요 브랜치들(master, develop)과 일정 기간 동안만 유지되는 보조 브랜치들(feature, release, hotfix)이 있다.</p>
+                <p>정리하면 깃 플로우는 프로그램이 아니라 개발자끼리 지키는 하나의 개발 원칙같은 것이다.</p>
             </div>
         </section>
         <section>
-            <h2>Develop Branch</h2>
+            <h2>Branch</h2>
             <div>
-                <p>main branch 에서 생성한다.</p>
-                <p>Git Flow는 main branch와 develop branch 2개의 branch를 기준으로 하여, side branch를 생성하여 소스 관리를 한다.</p>
+                <p>여기에 feature, release, master, develop, hotfix 브랜치 및 Git 태그가 있다.</p>
+                <p>GitFlow를 쓰면 feature, release, hotfix 브랜치 등 다른 브랜치가 develop으로 병합된다.</p>
                 <p>side branch에는 feature, release, hotfix branch가 있다.</p>
-                <div><img src="./assets/images/gitflow.png" alt="Git Flow"></div>
+                <ul>
+                    <li>master : 제품으로 출시될 수 있는 브랜치</li>
+                    <li>develop : 다음 출시 버전을 개발하는 브랜치</li>
+                    <li>feature : 기능을 개발하는 브랜치</li>
+                    <li>release : 이번 출시 버전을 준비하는 브랜치</li>
+                    <li>hotfix : 출시 버전에서 발생한 버그를 수정 하는 브랜치</li>
+                </ul>
+                <p><img src="./assets/images/gitflow.png" alt="Git Flow"></p>
             </div>
         </section>
         <section>
-            <h2>subject</h2>
-            <div>contents</div>
+            <h2>장점</h2>
+            <div>
+                <p>승인된 개발자만 코드에 접근할 수 있게 해서 안전하게 소스코드를 관리할 수 있다</p>
+                <p>출시된 프로그램의 코드를 안전하게 수정, 병합할 수 있다</p>
+                <p>feature 브랜치, 풀 리퀘스트를 활용해서 새 기능 개발에 집중할 수 있다</p>
+            </div>
         </section>
         <section>
             <h2>subject</h2>
